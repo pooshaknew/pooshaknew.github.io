@@ -1,0 +1,27 @@
+backend:
+  name: github
+  repo: pooshaknew/pooshaknew.github.io
+media_folder: "images"
+public_folder: "/images"
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "products"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Payment Link", name: "payment_link", widget: "string" }
+  - name: "orders"
+    label: "Orders"
+    folder: "orders"
+    create: true
+    fields:
+      - { label: "Product", name: "product", widget: "string" }
+      - { label: "Customer Name", name: "name", widget: "string" }
+      - { label: "Email", name: "email", widget: "string" }
+      - { label: "Quantity", name: "quantity", widget: "number" }
+      - { label: "Address", name: "address", widget: "text" }
+      - { label: "Payment Status", name: "payment_status", widget: "string", default: "pending" }
